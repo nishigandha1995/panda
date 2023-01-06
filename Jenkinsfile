@@ -7,7 +7,7 @@ pipeline {
     agent { label "slave_for_project-A"}
 
     tools {
-        maven 'maven_3.8.6'
+        maven 'maven_3.8.7'
     }
 
     stages {
