@@ -4,7 +4,7 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
     }
 
-    agent { label "slave_for_project-A"}
+    agent { label 'slave_for_project-A' }
 
     tools {
         maven 'maven_3.8.7'
@@ -21,7 +21,6 @@ pipeline {
                 echo "this pipeline is running via Jenkins User"
             }
         }
-
         stage('Code Compilation') {
             steps {
                 echo 'Code Compilation is In Progress!'
@@ -37,12 +36,11 @@ pipeline {
                 sh 'mvn clean test'
             }
         }
-
         stage('Sonar Code Analysis') {
             steps {
                 echo 'Creating War Artifact'
                 sh 'java -version'
             }
-        }
+		}
     }
 }
