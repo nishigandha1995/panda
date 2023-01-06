@@ -52,7 +52,7 @@ pipeline {
             }
         }
 
-        stage('Push Doker Image to AWS ECR') {
+        stage('AWS ECR') {
             steps {
                 echo 'Hello, JDK'
                 sh 'java -version'
