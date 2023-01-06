@@ -63,7 +63,6 @@ pipeline {
             steps {
                 echo 'Hello, JDK'
                 sh 'java -version'
-
 			}
 		}
 
@@ -71,7 +70,6 @@ pipeline {
             steps {
                 echo 'Hello, JDK'
                 sh 'java -version'
-
 			}
 		}
     }
